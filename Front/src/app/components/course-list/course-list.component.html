@@ -1,0 +1,19 @@
+<div class="center">
+    <table class="content-table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Description</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let course of courses" (click)="navigateToCourse(course.id)">
+          <td>{{ course.name }}</td>
+          <td>{{ course.description }}</td>
+          <td><button (click)="viewComments(course.id)">Comms</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <router-outlet></router-outlet>

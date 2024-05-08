@@ -1,0 +1,98 @@
+* {
+    
+    font-family: sans-serif;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 500px;
+    border-radius: 20px 20px 20px 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+.content-table tr {
+    
+    background-color: rgb(118, 101, 101)
+}
+.content-table tr:hover {
+    transform: scale(1.002); 
+    background-color: #4f4646
+}
+
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+.icon {
+    font-size: 16px;
+    color: green;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s; 
+  }
+  
+  
+  .icon:hover {
+    font-size: 17px; 
+    color: blue; 
+  }
+
+  
+  button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  button:active {
+    background-color: #037a4e; /* Darker green when button is clicked */
+  }
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+  
+  
+  
+  
