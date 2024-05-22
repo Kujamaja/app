@@ -1,5 +1,8 @@
 
-<p>dfasdsa</p>
+<div *ngIf="courseName">
+  <h1>{{ courseName }}</h1>
+</div>
+
 <div *ngIf="videoUrl" class="video-container">
   <iframe width="560" height="315" [src]="videoUrl" frameborder="0" allowfullscreen></iframe>
 </div>

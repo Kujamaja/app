@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoursePageComponent } from './components/course-page/course-page.component';
 import { CourseListComponent } from './components/course-list/course-list.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
 
 
@@ -16,6 +18,8 @@ import { CourseListComponent } from './components/course-list/course-list.compon
     AppComponent,
     CoursePageComponent,
     CourseListComponent,
+    LoginPageComponent,
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,

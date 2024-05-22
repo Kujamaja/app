@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-course-list',
@@ -12,9 +12,7 @@ export class CourseListComponent implements OnInit {
   courses: any[] | undefined;
   youtubeLink: SafeResourceUrl | undefined;
 
-  constructor(private http: HttpClient,private sanitizer: DomSanitizer,private router: Router) {
-    this.youtubeLink = this.sanitizer.bypassSecurityTrustResourceUrl("https://www.youtube.com/embed/6G19kFcVXTo");
-  }
+  constructor(private http: HttpClient, private sanitizer: DomSanitizer, private router: Router) { }
 
   navigateToCourse(courseId: number) {
     this.router.navigate(['/courses', courseId]);
@@ -22,6 +20,7 @@ export class CourseListComponent implements OnInit {
 
   ngOnInit() {
     this.getAllCourses();
+    
   }
 
   getAllCourses() {
@@ -30,6 +29,8 @@ export class CourseListComponent implements OnInit {
         this.courses = courses;
       });
   }
+
+
 
   viewComments(courseId: number) {
     this.http.get<any[]>(`http://localhost:8080/courses/${courseId}/comments`)
